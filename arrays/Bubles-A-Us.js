@@ -6,25 +6,23 @@ function bubblesTest() {
   let output;
   let testNumbers = scores.length;
   let highestScore = 0;
-  let hiScoreIndeces = "";
-  let hiScoreIndex;
 
-  
-  for (let i = 0; i < scores.length;i++) {
-      output = "Bubble solution #" + i + " score:" + scores[i];
-      console.log(output);
+  for (let i = 0; i < scores.length; i++) {
+    output = "Bubble solution #" + i + " score:" + scores[i];
+    console.log(output);
     if (scores[i] > highestScore) {
       highestScore = scores[i];
-    //   hiScoreIndex = "#" + i;
     }
-    // if (scores[i] == highestScore) {
-    //     hiScoreIndeces += hiScoreIndex;
-        
-    // }
-    ;
   }
   console.log(`Bubbles test: ${testNumbers}`);
   console.log("Highest bublle score: " + highestScore);
+
+  let hiScoreIndeces = [];
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] == highestScore) {
+      hiScoreIndeces.push(i);
+    }
+  }
   console.log("Solutions with highest score: " + hiScoreIndeces);
 }
 bubblesTest();
