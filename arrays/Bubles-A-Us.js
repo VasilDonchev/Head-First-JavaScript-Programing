@@ -9,19 +9,19 @@ function bubblesTest() {
   let hiScoreIndeces = "";
   let hiScoreIndex;
 
-  let i = 0;
-  while (i < scores.length) {
+  
+  for (let i = 0; i < scores.length;i++) {
       output = "Bubble solution #" + i + " score:" + scores[i];
       console.log(output);
     if (scores[i] > highestScore) {
       highestScore = scores[i];
-      hiScoreIndex = "#" + i;
+    //   hiScoreIndex = "#" + i;
     }
-    if (scores[i] == highestScore) {
-        hiScoreIndeces += hiScoreIndex;
+    // if (scores[i] == highestScore) {
+    //     hiScoreIndeces += hiScoreIndex;
         
-    }
-    i++;
+    // }
+    ;
   }
   console.log(`Bubbles test: ${testNumbers}`);
   console.log("Highest bublle score: " + highestScore);
